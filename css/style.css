@@ -7,28 +7,36 @@
 body {
   background: #d8dde3;
   color: #1f1f1f;
-  font-family: Arial, sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
-nav {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+nav{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 
-  padding: 2rem 3rem;
+    padding:25px 45px;
 
-  z-index: 100;
+    z-index:10;
 }
 
-.logo,
-.nav-button {
-  color: white;
-  text-decoration: none;
+.logo{
+    color:white;
+    font-family:'Montserrat', sans-serif;
+    font-size:1rem;
+}
+
+.nav-button{
+    color:white;
+    text-decoration:none;
+
+    font-family:'Montserrat', sans-serif;
+    font-size:1rem;
 }
 
 .hero {
@@ -37,9 +45,7 @@ nav {
   background-image: url("../images/hero.jpg");
   background-size: cover;
   background-position: center;
-}
 
-.hero {
   height: calc(100vh - 70px);
 
   background-image: url("../images/hero.jpg");
@@ -49,9 +55,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-}
 
-.hero {
   position: relative;
 }
 
@@ -61,47 +65,86 @@ nav {
   position: absolute;
   inset: 0;
 
-  background: rgba(0,0,0,0.35);
+  background: rgba(0,0,0,0.15);
 }
 
 .hero-overlay {
   position: relative;
+
   z-index: 2;
-}
 
-.hero-overlay {
   text-align: center;
-  color: white;
+  
+  color: #E7F0FF;
 }
 
-.hero-overlay h1 {
-  font-size: 6rem;
-  font-weight: 900;
-  letter-spacing: 4px;
+.hero-overlay h1{
+    font-family:'Sedgwick Ave Display', cursive;
 
-  margin-bottom: 1rem;
+    font-size:8rem;
+
+    font-weight:600;
+
+    letter-spacing:10px;
+
+    line-height:1;
+
+    margin-bottom:20px;
+
+    text-transform:uppercase;
 }
 
-.hero-overlay p {
-  font-size: 1.3rem;
-  letter-spacing: 2px;
+.hero-overlay p{
+    font-family:'Montserrat', sans-serif;
 
-  margin-bottom: 4rem;
+    font-size:1.1rem;
+
+    font-weight:700;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    margin-bottom:350px;
 }
 
-.hero-button {
-  display: inline-block;
+.hero-button{
 
-  padding: 1.25rem 4rem;
+    display:inline-block;
 
-  background: #d8dde3;
-  color: #111;
+    padding:17px 34px;
 
-  text-decoration: none;
+    background:#e9edf7;
 
-  border-radius: 999px;
+    color:#111;
 
-  font-weight: bold;
+    text-decoration:none;
 
-  letter-spacing: 6px;
+    border-radius:30px;
+
+    font-family:'Montserrat', sans-serif;
+
+    font-weight:700;
+
+    font-size:2.5rem;
+
+    letter-spacing:12px;
+
+    text-transform:uppercase;
+
+    border:3px solid rgba(0,0,0,.35);
+
+    transition:.3s;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,.25);
+}
+
+.hero-button:hover{
+    transform:scale(1.02);
+
+    box-shadow: 0 12px 30px rgba(0,0,0,.3);
+
+    background:#86744D;
+
+    color:#E7F0FF;
 }
