@@ -169,6 +169,86 @@ nav{
     color:#E7F0FF;
 }
 
+/* ==========================
+   PROOF SECTION
+========================== */
+
+.proof{
+    background:
+    linear-gradient(
+        to bottom,
+        transparent 10%,
+        white 90%
+    ),
+    url("../images/victory.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    height:50vh;
+
+    padding:150px 40px;
+
+    text-align:center;
+}
+
+.proof-content{
+
+    max-width:100%;
+
+    text-align:left;
+}
+
+.proof h2{
+
+    font-family:'Montserrat', sans-serif;
+
+    font-size:clamp(5rem, 14vw, 10rem);
+
+    font-weight:900;
+
+    line-height:1;
+
+    color:#305e98;
+
+    margin-bottom:0px;
+}
+
+.proof p{
+
+    font-family:'Montserrat', sans-serif;
+
+    font-size:clamp(1.2rem, 2vw, 2rem);
+
+    font-weight:800;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    color:#111;
+
+    margin-bottom:15px;
+}
+
+.proof span{
+
+    display:block;
+
+    font-family:'Montserrat', sans-serif;
+
+    font-size:clamp(1rem, 1.5vw, 1.2rem);
+
+    letter-spacing:4px;
+
+    margin-bottom:10px;
+
+    text-transform:uppercase;
+
+    color:#666;
+}
+
 /* =========================
    COACHES SECTION
 ========================= */
@@ -183,10 +263,9 @@ nav{
 
     background: 
         linear-gradient(
-        0deg,
-        rgba(0,0,0,1) 0%,
-        rgba(0,0,0,.45) 35%,
-        rgba(0,0,0,0) 70%
+        to bottom,
+        white 0%,
+        black 100%
     );
 
     padding:120px 8%;
@@ -201,17 +280,13 @@ nav{
 }
 
 .coaches-header h2{
-    font-family:'Sedgwick Ave Display', cursive;
+    font-family:'Montserrat', cursive;
 
-    font-size:5rem;
-
-    letter-spacing:4px;
+    font-size:clamp(3rem, 6vw, 5rem);
 
     color:#111;
 
     margin-bottom:20px;
-
-    transform:scaleX(1.3);
 }
 
 .coaches-header p{
@@ -401,16 +476,25 @@ nav{
 ========================= */
 
 .sessions {
-
   min-height:100vh;
+
   padding:120px 8%;
 
-  background-image: url("../images/night-flatiron.jpg");
+  background:linear-gradient(
+    to bottom,
+    transparent 85%,
+    black 100%
+  ),
+  url("../images/night-flatiron.jpg");
+
   background-size: cover;
+
   background-position: center;
 
   display: flex;
+
   justify-content: center;
+
   align-items: center;
 
   position: relative;
@@ -453,7 +537,7 @@ nav{
 
 .sessions-header h2 {
 
-    font-family:'Sedgwick Ave Display', cursive;
+    font-family:'Montserrat', cursive;
 
     font-size:clamp(3rem, 6vw, 5rem);
 
@@ -598,6 +682,157 @@ nav{
     color:#E7F0FF;
 }
 
+/* =========================
+   FOOTER
+========================= */
+
+.footer{
+
+    background:#000;
+
+    color:#E7F0FF;
+
+    padding:100px 40px 30px;
+
+    text-align:center;
+}
+
+.footer-content{
+
+    max-width:900px;
+
+    margin:0 auto;
+}
+
+.footer h2{
+
+    font-family:'Sedgwick Ave Display', cursive;
+
+    font-size: clamp(2rem, 4vw, 3rem);
+
+    margin-bottom:15px;
+
+    letter-spacing:3px;
+}
+
+.footer p{
+
+    font-family:'Montserrat', sans-serif;
+
+    font-size:1.2rem;
+
+    margin-bottom:40px;
+
+    color:rgba(231,240,255,.75);
+}
+
+.footer-button{
+
+    display:inline-block;
+
+    padding:16px 34px;
+
+    background:#E7F0FF;
+
+    color:#111;
+
+    text-decoration:none;
+
+    border-radius:30px;
+
+    font-family:'Montserrat', sans-serif;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    transition:.3s;
+
+    margin-bottom:50px;
+}
+
+.footer-button:hover{
+
+    background:#86744D;
+
+    color:#E7F0FF;
+
+    transform:scale(1.03);
+}
+
+.footer-links{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:30px;
+
+    margin-bottom:40px;
+}
+
+.footer-links a{
+
+    color:#E7F0FF;
+
+    text-decoration:none;
+
+    font-family:'Montserrat', sans-serif;
+
+    transition:.3s;
+}
+
+.footer-links a:hover{
+
+    color:#86744D;
+}
+
+.footer-top{
+
+    max-width:1400px;
+
+    margin:0 auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    gap:80px;
+}
+
+.footer-brand{
+
+    text-align:left;
+}
+
+.footer-actions{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-end;
+
+    gap:30px;
+}
+
+.footer-bottom{
+
+    font-family:'Montserrat', sans-serif;
+
+    font-size:.9rem;
+
+    color:rgba(231,240,255,.5);
+
+    border-top:1px solid rgba(231,240,255,.15);
+
+    padding-top:25px;
+}
+
 
 /* CARD IMAGES */
 
@@ -616,6 +851,9 @@ nav{
     background-image:url("../images/training.jpg");
 }
 
+
+
+
 /* =========================
    LAPTOPS
 ========================= */
@@ -630,6 +868,9 @@ nav{
     }
 
 }
+
+
+
 
 
 /* =========================
@@ -726,6 +967,27 @@ nav{
         font-size:.9rem;
     }
 
+    .footer-top{
+
+        flex-direction:column;
+
+        align-items:center;
+
+        text-align:center;
+
+        gap:40px;
+    }
+
+    .footer-brand{
+
+        text-align:center;
+    }
+
+    .footer-actions{
+
+        align-items:center;
+    }
+
 }
 @media (max-width:600px){
 
@@ -779,9 +1041,22 @@ nav{
     .session-card p{
         font-size:.9rem;
     }
-
 }
 @media (max-width: 480px){
+    .proof{
+
+        padding:100px 25px;
+    }
+
+    .proof p{
+
+        letter-spacing:2px;
+    }
+
+    .proof span{
+
+        letter-spacing:2px;
+    }
 
     .coach-card{
         width:100%;
