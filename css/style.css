@@ -1086,6 +1086,58 @@ nav{
     transform:translateX(-4px);
 }
 
+/* =========================
+   Training Regime Page
+========================= */
+
+.training-hero{
+    height:100vh;
+
+    background-image:
+        linear-gradient(
+            135deg,
+            transparent 40%,
+            black 90%
+        ),
+        url("../images/hangboard.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    display:flex;
+
+    align-items:center;
+}
+
+.training-hero-overlay{
+    max-width:650px;
+
+    padding-left:8%;
+}
+
+.training-hero h1{
+    font-family:'Sedgwick Ave Display', cursive;
+
+    font-size:clamp(4rem,8vw,8rem);
+
+    color:white;
+
+    margin-bottom:20px;
+}
+
+.training-hero p{
+    color:white;
+
+    font-size:1.3rem;
+
+    line-height:1.6;
+
+    margin-bottom:35px;
+
+    max-width:500px;
+}
+
 
 
 
