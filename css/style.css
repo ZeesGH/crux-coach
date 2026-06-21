@@ -4,12 +4,21 @@
   box-sizing: border-box;
 }
 
+:root{
+  --bg-light: #d8dde3;
+  --text-dark: #111;
+  --text-light: #f7f0ff;
+
+  --section-padding: 100px;
+  --card-radius: 24px;
+}
+
 /* =========================
    HERO SECTION
 ========================= */
 
 body {
-  background: #d8dde3;
+  background: var(--bg-light);
   color: #1f1f1f;
   font-family: 'Montserrat', sans-serif;
 }
@@ -27,6 +36,15 @@ nav{
     padding:25px 45px;
 
     z-index:10;
+}
+
+@media (max-width:480px){
+
+    nav{
+        flex-direction:column;
+        gap:10px;
+    }
+
 }
 
 .logo{
@@ -67,6 +85,10 @@ nav{
 }
 
 .hero-overlay {
+  max-width: 1200px;
+
+  margin: auto;
+
   position: relative;
 
   z-index: 2;
@@ -79,13 +101,11 @@ nav{
 .hero-overlay h1{
     font-family:'Sedgwick Ave Display', cursive;
 
-    font-size:8rem;
+    font-size:clamp(3rem, 8vw, 8rem);
 
     font-weight:600;
 
-    letter-spacing:5px;
-
-    transform:scaleX(1.5);
+    letter-spacing:0.08em;
 
     line-height:1;
 
@@ -97,7 +117,7 @@ nav{
 .hero-overlay p{
     font-family:'Montserrat', sans-serif;
 
-    font-size:1.1rem;
+    font-size:clamp(.85rem,1.5vw,1.1rem);
 
     font-weight:700;
 
@@ -105,7 +125,7 @@ nav{
 
     text-transform:uppercase;
 
-    margin-bottom:350px;
+    margin-bottom:clamp(40px, 8vh, 120px);
 }
 
 .hero-button{
@@ -126,9 +146,9 @@ nav{
 
     font-weight:700;
 
-    font-size:2.5rem;
+    font-size:clamp(1rem, 2vw, 2rem);
 
-    letter-spacing:12px;
+    letter-spacing:clamp(2px, 0.8vw, 12px);
 
     text-transform:uppercase;
 
@@ -152,6 +172,11 @@ nav{
 /* =========================
    COACHES SECTION
 ========================= */
+
+.coaches,
+.sessions{
+    overflow:hidden;
+}
 
 .coaches{
     color: #E7F0FF;
@@ -191,8 +216,15 @@ nav{
 
 .coaches-header p{
     font-family:'Montserrat', sans-serif;
-    font-size:1.2rem;
+
+    font-size:clamp(1rem, 2.5vw, 1.4rem);
+
     line-height:1.6;
+
+    max-width:700px;
+
+    margin:0 auto;
+   
     color:#444;
 }
 
@@ -209,10 +241,13 @@ nav{
 
     border-radius:24px;
 
-    height: calc(100vh - 100px);
+    aspect-ratio: 4 / 5;
+    min-height:500px;
     
     box-shadow:
     0 10px 30px rgba(0,0,0,.12);
+
+    max-height:900px;
 }
 
 .coach-card:hover img{
@@ -230,6 +265,19 @@ nav{
 
     transition: transform .6s ease;
 }
+
+@media (max-width: 1200px){
+    .coach-grid{
+        grid-template-columns:1fr;
+    }
+    .coach-card{
+
+        aspect-ratio:16/9;
+
+        min-height:450px;
+    }
+}
+
 
 .coach-overlay{
     position:absolute;
@@ -257,12 +305,28 @@ nav{
     );
 }
 
+@media (max-width:600px){
+
+    .coach-overlay{
+
+        background:
+        linear-gradient(
+            180deg,
+            rgba(0,0,0,.75),
+            rgba(0,0,0,.45)
+        );
+    }
+
+}
+
 .coach-overlay h3{
     font-family:'Sedgwick Ave Display', cursive;
 
-    font-size:4rem;
+    font-size:clamp(2rem,4vw,4rem);
 
     margin-bottom:15px;
+
+    line-height:.95;
 }
 
 .coach-line{
@@ -338,7 +402,8 @@ nav{
 
 .sessions {
 
- height: 100vh;
+  min-height:100vh;
+  padding:120px 8%;
 
   background-image: url("../images/night-flatiron.jpg");
   background-size: cover;
@@ -351,19 +416,32 @@ nav{
   position: relative;
 }
 
-.sessions-content {
-
+.sessions-content{
     max-width:1400px;
+
+    width:100%;
 
     margin:0 auto;
 
     display:grid;
 
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns:1fr 1fr;
 
     gap:60px;
 
     align-items:start;
+}
+
+@media (max-width:1200px){
+
+    .sessions-content{
+        grid-template-columns:1fr;
+    }
+
+    .sessions-right{
+        display:none;
+    }
+
 }
 
 /* LEFT SIDE */
@@ -377,7 +455,7 @@ nav{
 
     font-family:'Sedgwick Ave Display', cursive;
 
-    font-size:5rem;
+    font-size:clamp(3rem, 6vw, 5rem);
 
     color:#E7F0FF;
 
@@ -438,6 +516,8 @@ nav{
     background-position:center;
 
     align-items: flex-end;
+
+    max-height:350px;
 }
 
 .session-card:hover{
@@ -475,7 +555,7 @@ nav{
 
     font-family:'Sedgwick Ave Display', cursive;
 
-    font-size:2.8rem;
+    font-size:clamp(1.8rem,3vw,2.8rem);
 
     margin-bottom:10px;
 }
@@ -534,4 +614,206 @@ nav{
 .training {
 
     background-image:url("../images/training.jpg");
+}
+
+/* =========================
+   LAPTOPS
+========================= */
+@media (max-width:1400px){
+
+    .coach-grid{
+        gap:50px;
+    }
+
+    .sessions-content{
+        gap:40px;
+    }
+
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width:1000px){
+
+    nav{
+        padding:20px 25px;
+    }
+
+    .hero-overlay h1{
+        transform:none;
+    }
+
+    .coach-grid{
+        grid-template-columns:1fr;
+    }
+
+    .sessions-content{
+        grid-template-columns:1fr;
+    }
+
+    .sessions-right{
+        min-height:500px;
+    }
+
+    .session-card{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        justify-content:flex-end;
+
+        gap:20px;
+    }
+}
+
+
+
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width:768px){
+
+    .hero-overlay h1{
+        font-size:3.5rem;
+        letter-spacing:2px;
+    }
+
+    .hero-overlay p{
+        font-size:.9rem;
+    }
+
+    .hero-button{
+        letter-spacing:4px;
+        padding:14px 22px;
+    }
+
+    .coaches-header h2{
+        font-size:3.5rem;
+        transform:none;
+    }
+
+    .coach-overlay{
+        padding:30px;
+    }
+
+    .coach-overlay h3{
+        font-size:2.5rem;
+    }
+
+    .sessions-header h2{
+        font-size:3.5rem;
+    }
+
+    .session-card{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:20px;
+        padding:30px;
+    }
+
+    .session-btn{
+        align-self:flex-start;
+
+        padding:12px 20px;
+
+        font-size:.9rem;
+    }
+
+}
+@media (max-width:600px){
+
+    nav{
+        padding:15px 20px;
+    }
+
+    .logo,
+    .nav-button{
+        font-size:.85rem;
+    }
+
+    .hero{
+        padding:0 20px;
+    }
+
+    .hero-overlay h1{
+        font-size:3rem;
+    }
+
+    .hero-overlay p{
+        letter-spacing:1px;
+    }
+
+    .coaches{
+        padding:80px 20px;
+    }
+
+    .sessions{
+        padding:80px 20px;
+    }
+
+    .coach-overlay{
+        padding:20px;
+    }
+
+    .coach-overlay h4{
+        font-size:.95rem;
+    }
+
+    .coach-overlay p{
+        max-width:none;
+        font-size:.95rem;
+    }
+
+    .session-card{
+        min-height:220px;
+        padding:20px;
+    }
+
+    .session-card p{
+        font-size:.9rem;
+    }
+
+}
+@media (max-width: 480px){
+
+    .coach-card{
+        width:100%;
+        min-height:700px;
+    }
+
+    .coach-content{
+        padding:40px;
+    }
+
+    .coach-content p{
+
+        font-size:1rem;
+    }
+
+    .coach-content h3{
+        font-size:3.5rem;
+        line-height:.9;
+    }
+    .coaches-header p{
+
+        max-width:320px;
+
+        font-size:1rem;
+
+        line-height:1.5;
+    }
+    .coaches-header h2{
+
+        font-size:4rem;
+
+        line-height:.9;
+    }
+
 }
