@@ -83,7 +83,9 @@ nav{
 
     font-weight:600;
 
-    letter-spacing:10px;
+    letter-spacing:5px;
+
+    transform:scaleX(1.5);
 
     line-height:1;
 
@@ -153,28 +155,38 @@ nav{
 
 .coaches{
     color: #E7F0FF;
+
     background: 
         linear-gradient(
         0deg,
-        rgba(0,0,0,.75) 0%,
+        rgba(0,0,0,1) 0%,
         rgba(0,0,0,.45) 35%,
         rgba(0,0,0,0) 70%
     );
+
     padding:120px 8%;
 }
 
 .coaches-header{
     text-align:center;
+
     max-width:900px;
+
     margin:0 auto 100px;
 }
 
 .coaches-header h2{
     font-family:'Sedgwick Ave Display', cursive;
+
     font-size:5rem;
+
     letter-spacing:4px;
+
     color:#111;
+
     margin-bottom:20px;
+
+    transform:scaleX(1.3);
 }
 
 .coaches-header p{
@@ -309,8 +321,6 @@ nav{
 
 .coach-button:hover{
 
-    transform:translateY(-2px);
-
     transform:scale(1.02);
 
     background:#86744D;
@@ -322,4 +332,206 @@ nav{
     transform: scale(1.06);
 }
 
+/* =========================
+   SESSIONS SECTION
+========================= */
 
+.sessions {
+
+ height: 100vh;
+
+  background-image: url("../images/night-flatiron.jpg");
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+}
+
+.sessions-content {
+
+    max-width:1400px;
+
+    margin:0 auto;
+
+    display:grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap:60px;
+
+    align-items:start;
+}
+
+/* LEFT SIDE */
+
+.sessions-header {
+
+    margin-bottom:60px;
+}
+
+.sessions-header h2 {
+
+    font-family:'Sedgwick Ave Display', cursive;
+
+    font-size:5rem;
+
+    color:#E7F0FF;
+
+    margin-bottom:10px;
+}
+
+.sessions-line {
+
+    width:50px;
+
+    height:2px;
+
+    background:#E7F0FF;
+
+    margin-bottom:20px;
+}
+
+.sessions-header p {
+
+    font-family:'Montserrat', sans-serif;
+
+    font-size:1.4rem;
+
+    color:#bdbdbd;
+
+    max-width:350px;
+
+    line-height:1.5;
+}
+
+/* SESSION CARDS */
+
+.session-card {
+    transition: .3s ease;
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:20px;
+
+    min-height:250px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:50px;
+
+    margin-bottom:16px;
+
+    color:white;
+
+    background-size:cover;
+
+    background-position:center;
+
+    align-items: flex-end;
+}
+
+.session-card:hover{
+    transform:translateX(8px);
+}
+
+.session-card::before {
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,.65);
+}
+
+.session-text,
+.session-btn {
+    margin-bottom:10px;
+
+    position:relative;
+
+    z-index:2;
+}
+
+.session-icon {
+
+    font-size:2rem;
+
+    margin-bottom:10px;
+}
+
+.session-card h3 {
+
+    font-family:'Sedgwick Ave Display', cursive;
+
+    font-size:2.8rem;
+
+    margin-bottom:10px;
+}
+
+.session-card p {
+
+    font-family:'Montserrat', sans-serif;
+
+    max-width:400px;
+
+    line-height:1.5;
+
+    color:#e0e0e0;
+}
+
+.session-btn {
+
+    background:#E7F0FF;
+
+    color:#111;
+
+    padding:14px 28px;
+
+    border-radius:30px;
+
+    text-decoration:none;
+
+    font-family:'Montserrat', sans-serif;
+
+    font-weight:700;
+
+    white-space:nowrap;
+}
+
+.session-btn:hover{
+    transform:scale(1.02);
+
+    background:#86744D;
+
+    color:#E7F0FF;
+}
+
+
+/* CARD IMAGES */
+
+.video-review {
+
+    background-image:url("../images/video-review.jpg");
+}
+
+.day-wall {
+
+    background-image:url("../images/send-sesh.jpg");
+}
+
+.training {
+
+    background-image:url("../images/training.jpg");
+}
