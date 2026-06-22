@@ -1198,7 +1198,12 @@ nav{
 
     min-height:100vh;
 
-    background:#f4f4f4;
+    background:linear-gradient(
+    to bottom,
+    #86744D 0%,
+    White 50%,
+    black 100%
+    );
 
     padding:140px 8%;
 }
@@ -1476,9 +1481,10 @@ button:disabled{
     background:
     linear-gradient(
         180deg,
-        #f4f4f4 0%,
+        transparent 0%,
         #ffffff 100%
-    );
+    ),
+    url("../images/celebration.jpg");
 
     display:flex;
 
@@ -1553,7 +1559,7 @@ button:disabled{
 
     padding:20px 40px;
 
-    background:#111;
+    background: black;
 
     color:white;
 
