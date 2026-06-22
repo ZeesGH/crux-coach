@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Bookings</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <section class="booking-page">
+
+        <div class="booking-container">
+
+            <a href="index.html" class="back-home">
+                ← Back to Home
+            </a>
+
+            <h1>Book a Session</h1>
+
+            <p class="booking-intro">
+                Tell us a little about yourself and your goals. We'll reach out within 2-3 business days to coordinate details.
+            </p>
+
+            <form
+                action="https://formspree.io/f/xrewznol"
+                method="POST"
+                class="booking-form">
+
+                <input
+                    type="hidden"
+                    name="_subject"
+                    value="New Crux Coaching Booking Request"
+                >
+
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="session-type">Session Type</label>
+
+                    <select
+                        id="session-type"
+                        name="session-type"
+                        required
+                    >
+                        <option value="">Select a session</option>
+                        <option value="send-session">Send Session</option>
+                        <option value="video-review">Video Review</option>
+                        <option value="training-plan">Training Plan</option>
+                    </select>
+                </div>
+
+                <div id="send-session-fields">
+
+                    <div class="form-group">
+                        <label for="project">Current Project</label>
+
+                        <input
+                            type="text"
+                            id="project"
+                            name="project"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="location">Preferred Location</label>
+
+                        <input
+                            type="text"
+                            id="location"
+                            name="location"
+                        >
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="climbers">
+                            How Many Climbers?
+                        </label>
+
+                        <select
+                            id="climbers"
+                            name="climbers"
+                        >
+                            <option value="">
+                                Select
+                            </option>
+
+                            <option value="1">
+                                Solo
+                            </option>
+
+                            <option value="2">
+                                Pair
+                            </option>
+
+                            <option value="3">
+                                Group (3)
+                            </option>
+
+                            <option value="4">
+                                Group (4)
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="availability-section">
+
+                        <label class="availability-label">
+                            Preferred Dates
+                        </label>
+
+                        <div class="availability-grid">
+
+                            <div class="form-group">
+
+                                <label for="date1">
+                                    Preferred Date 1 *
+                                </label>
+
+                                <input
+                                    type="date"
+                                    id="date1"
+                                    name="date1"
+                                >
+
+                            </div>
+
+                            <div class="form-group">
+
+                                <label for="date2">
+                                    Preferred Date 2
+                                </label>
+
+                                <input
+                                    type="date"
+                                    id="date2"
+                                    name="date2"
+                                >
+
+                            </div>
+
+                            <div class="form-group">
+
+                                <label for="date3">
+                                    Preferred Date 3
+                                </label>
+
+                                <input
+                                    type="date"
+                                    id="date3"
+                                    name="date3"
+                                >
+
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="time-pref">
+                                Preferred Time
+                            </label>
+
+                            <select
+                                id="time-pref"
+                                name="time-pref"
+                            >
+
+                                <option value="">
+                                    Select
+                                </option>
+
+                                <option value="morning">
+                                    Morning
+                                </option>
+
+                                <option value="afternoon">
+                                    Afternoon
+                                </option>
+
+                                <option value="evening">
+                                    Evening
+                                </option>
+
+                                <option value="flexible">
+                                    Flexible
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div id="training-fields">
+
+                    <div class="form-group">
+
+                        <label for="weakness">
+                            Specific Area of Weakness? (not required)
+                        </label>
+
+                        <input
+                            type="text"
+                            id="weakness"
+                            name="weakness"
+                            placeholder="Finger strength, route reading, outdoor confidence, etc."
+                        >
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="climbing-style">
+                            Primary Type of Climbing
+                        </label>
+
+                        <select
+                            id="climbing-style"
+                            name="climbing-style"
+                        >
+
+                            <option value="">
+                                Select
+                            </option>
+
+                            <option value="sport">
+                                Sport
+                            </option>
+
+                            <option value="trad">
+                                Trad
+                            </option>
+
+                            <option value="boulder">
+                                Boulder
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+                <div id="grade-field">
+
+                    <div class="form-group">
+
+                        <label for="grade">
+                            Current Projecting Grade
+                        </label>
+
+                        <input
+                            type="text"
+                            id="grade"
+                            name="grade"
+                            placeholder="5.11d, V6, 5.10+"
+                        >
+
+                    </div>
+
+                </div>
+
+                <div id="video-field">
+                    <div class="form-group">
+
+                        <label for="video-link">
+                            Video Link
+                        </label>
+
+                        <input
+                            type="url"
+                            id="video-link"
+                            name="video-link"
+                            placeholder="Google Drive, Dropbox, YouTube, Vimeo, etc."
+                        >
+
+                    </div>
+                </div>
+
+                <div id="notes-field">
+
+                    <div class="form-group">
+
+                        <label for="notes">
+                            Additional Notes
+                        </label>
+
+                        <textarea
+                            id="notes"
+                            name="notes"
+                            rows="5"
+                        ></textarea>
+
+                    </div>
+
+                </div>
+
+                <button
+                    type="submit"
+                    href="thanks.html"
+                    class="submit-button"
+                >
+                    Submit Request
+                </button>
+
+            </form>
+
+        </div>
+    </section>
+
+    <script>
+
+        const sessionType =
+            document.getElementById("session-type");
+
+        const climbers =
+            document.getElementById("climbers");
+
+        const sendFields =
+            document.getElementById("send-session-fields");
+
+        const project =
+            document.getElementById("project");
+
+        const locationField =
+            document.getElementById("location");
+
+        const date1 =
+            document.getElementById("date1");
+
+        const date2 =
+            document.getElementById("date2");
+
+        const date3 =
+            document.getElementById("date3");
+
+        const timePref =
+            document.getElementById("time-pref");
+
+        const notesField =
+            document.getElementById("notes-field");
+
+        const trainingFields =
+            document.getElementById("training-fields");
+
+        const climbingStyle =
+            document.getElementById("climbing-style");
+
+        const gradeField =
+            document.getElementById("grade-field");
+
+        const grade =
+            document.getElementById("grade");
+
+        const weakness =
+            document.getElementById("weakness");
+
+        const videoField =
+            document.getElementById("video-field");
+
+        const videoLink =
+            document.getElementById("video-link");
+
+        sessionType.addEventListener("change", () => {
+
+            sendFields.style.display = "none";
+            trainingFields.style.display = "none";
+            gradeField.style.display = "none";
+            notesField.style.display = "none";
+
+            project.required = false;
+            locationField.required = false;
+            climbers.required = false;
+            date1.required = false;
+            date2.required = false;
+            date3.required = false;
+            timePref.required = false;
+
+            weakness.required = false;
+            climbingStyle.required = false;
+            grade.required = false;
+
+            if(sessionType.value === "send-session"){
+
+                sendFields.style.display = "flex";
+
+                project.required = true;
+                locationField.required = true;
+                climbers.required = true;
+                date1.required = true;
+                timePref.required = true;
+            }
+
+            if(sessionType.value === "training-plan"){
+
+                trainingFields.style.display = "flex";
+
+                climbingStyle.required = true;
+            }
+
+            if(sessionType.value === "video-review"){
+
+                videoField.style.display = "flex";
+
+                videoLink.required = true;
+            }
+
+        });
+
+        climbingStyle.addEventListener("change", () => {
+
+            if(climbingStyle.value !== ""){
+
+                gradeField.style.display = "flex";
+
+                grade.required = true;
+
+            } else {
+
+                gradeField.style.display = "none";
+
+                grade.required = false;
+            }
+
+        });
+
+        grade.addEventListener("input", () => {
+
+            if(grade.value.trim() !== ""){
+
+                notesField.style.display = "flex";
+
+            } else {
+
+                notesField.style.display = "none";
+            }
+
+        });
+
+        timePref.addEventListener("change", () => {
+
+            if(timePref.value !== ""){
+
+                notesField.style.display = "flex";
+
+            }
+
+            else{
+
+                notesField.style.display = "none";
+
+            }
+
+        });
+
+        sessionType.addEventListener("change", () => {
+
+            console.log(sessionType.value);
+
+        });
+
+    </script>
+</body>
+</html>
